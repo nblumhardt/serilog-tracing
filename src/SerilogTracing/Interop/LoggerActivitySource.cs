@@ -45,10 +45,8 @@ static class LoggerActivitySource
         {
             manualActivity.SetParentId(parent.TraceId, parent.SpanId, parent.ActivityTraceFlags);
         }
-        else
-        {
-            manualActivity.ActivityTraceFlags |= ActivityTraceFlags.Recorded;
-        }
+
+        manualActivity.ActivityTraceFlags |= ActivityTraceFlags.Recorded;
 
         manualActivity.Start();
 
